@@ -159,7 +159,7 @@ export default function AdminPage() {
       {/* Password Requests Tab */}
       {tab === "reqs" && (
         <div style={{display:"flex",flexDirection:"column",gap:12}}>
-          {reqs.length === 0 && <div className="card" style={{padding:24,textAlign:"center"}} className="text-muted">No pending requests</div>}
+          {reqs.length === 0 && <div className="card text-muted" style={{padding:24,textAlign:"center"}}>No pending requests</div>}
           {reqs.map(r => (
             <div key={r._id} className="card pw-request">
               <div className="pw-req-header">
