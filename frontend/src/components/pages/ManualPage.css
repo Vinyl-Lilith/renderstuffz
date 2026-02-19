@@ -1,0 +1,59 @@
+.manual-page { display: flex; flex-direction: column; gap: 20px; }
+
+.manual-warn {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 16px 20px;
+  border-left: 3px solid var(--amber);
+  background: var(--amber-glow);
+}
+
+.actuator-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 16px;
+}
+
+.actuator-card {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  transition: all 0.2s;
+}
+.actuator-card.act-on { border-color: rgba(74,222,128,0.3); box-shadow: 0 0 20px var(--accent-glow2); }
+.actuator-card.act-manual { border-color: rgba(251,191,36,0.3); }
+
+.act-top { display: flex; align-items: center; justify-content: space-between; }
+.act-icon { font-size: 28px; line-height: 1; }
+.act-badges { display: flex; gap: 6px; flex-wrap: wrap; }
+
+.act-label { font-size: 16px; font-weight: 700; }
+.act-desc  { font-size: 12px; line-height: 1.5; }
+
+.peltier-pwm { display: flex; flex-direction: column; gap: 6px; }
+.pwm-bar-wrap {
+  height: 6px;
+  border-radius: 99px;
+  background: var(--bg-hover);
+  overflow: hidden;
+}
+.pwm-bar {
+  height: 100%;
+  border-radius: 99px;
+  background: linear-gradient(90deg, var(--teal), var(--accent-primary));
+  transition: width 0.5s ease;
+}
+
+.act-btn { margin-top: auto; justify-content: center; }
+
+.manual-footer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 16px;
+  padding-top: 4px;
+}
+.logic-msg.ok  { color: var(--accent-primary); }
+.logic-msg.err { color: var(--rose); }
